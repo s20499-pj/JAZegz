@@ -20,7 +20,7 @@ public class MyService {
     }
 
     public Data getExchangeRate(java.util.Date startDate, java.util.Date endDate){
-        Data data = restTemplate.getForEntity("http://api.nbp.pl/api/cenyzlota/"+startDate+"/"+endDate+"/", Data.class).getBody();
+        Data data = restTemplate.getForEntity("http://api.nbp.pl/api/cenyzlota/"+startDate+"/"+endDate, Data.class).getBody();
         return data;
     }
 }
